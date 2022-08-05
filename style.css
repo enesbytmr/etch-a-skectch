@@ -1,0 +1,100 @@
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+body{
+    background-color: antiquewhite;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.grid-item{
+
+
+}
+
+
+.buttons {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+    align-items: center;
+
+}
+
+.buttons>button {
+    height: 2rem;
+    font-size: medium;
+    transition: 1000ms;
+}
+
+.buttons>label {
+    text-align: center;
+    margin-top: 2rem;
+
+}
+
+.button {
+    width: 250px;
+    height: 100px;
+}
+
+.grid {
+    height: 500px;
+    width: 500px;
+    margin: 2rem;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    display: grid;
+    background-color: white;
+    box-shadow: 2px 2px 2px 5px;
+
+}
+
+.row {
+    display: flex;
+
+}
+
+.grid-box {
+    background-color: #3498db;
+    border: 1px solid white;
+}
+
+.input-color-container {
+    position: relative;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border: solid 2px #ddd;
+    border-radius: 40px;
+
+}
+
+.input-color {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 56px;
+    height: 56px;
+    border: none;
+
+}
+
+.input-color-label {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #3498db;
+}
+.active{
+    scale: 1.2;
+    color: white;
+    background-color: black;
+
+}
