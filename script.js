@@ -7,6 +7,9 @@ const rainbowBtn = document.getElementById('rainbow')
 const eraserBtn = document.getElementById('erase')
 const currentColor = document.getElementById('input-color')
 const DEFAULT_MODE = 'color'
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
 let currentMode = DEFAULT_MODE
 function setCurrentMode(newMode) {
     activateButton(newMode)
@@ -70,6 +73,10 @@ function activateButton(newMode) {
     }
   }
 
+  
+  resetBtn.addEventListener('click', ()=>{
+    makeRows(rangeSlider.value)
+  })
 //rainbow
 //  #F45150
 //  #F4B654
